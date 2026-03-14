@@ -13,12 +13,10 @@ The repository provides:
 ---
 
 ## System Workflow
+
   Virus Host Interaction related articles
-  
                   │
-                  
-                  ▼
-                  
+                  ▼ 
           Data Processing
            (data_process)
                   │
@@ -27,8 +25,10 @@ The repository provides:
            (fine_tune_data)
                   │
                   ▼
+                  
       VHI entity extraction task
                   │
+                  
  ┌────────────────┴─────────────────┐
  ▼                                  ▼
 BERT Fine-tuning        GPT  Fine-tuning 
@@ -41,6 +41,7 @@ BERT Fine-tuning        GPT  Fine-tuning
                   │
                   ▼
 VHI information extraction(IE) Performance
+
 
 
 ## Project Structure

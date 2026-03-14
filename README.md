@@ -1,8 +1,126 @@
 # ChatMed-VHI
-In this work, we introduced ChatMed-VHI, an instruction-tuned NER model based on ChatGPT-3.5 turbo, designed to extract virus-host interactions (VHIs) from full-length biomedical research articles. 
 
-ChatMed-VHI operates on extended context windows of 2–6 sentences, enabling it to model short- to mid-range cross-sentence dependencies, such as resolving co-references or capturing interactions that span multiple sentences. By curating training data from both narrative (Results, Materials and Methods) and non-narrative (tables in both main and supplementary materials) sections, we enable the model to capture contextual and structured interaction information more comprehensively. This improves extraction accuracy and supports the construction of more holistic and context-aware biomedical datasets. 
+ChatMed-VHI is a medical NLP model designed for information extraction in Virus Host Interaction (VHI).
 
-Next, we systematically compared two classes of models for VHI extraction: supervised fine-tuned BERT-based models (PubMedBERT, BioLinkBERT) and instruction-tuned GPT-based models (ChatGPT-3.5). Our results demonstrated that instruction-tuned GPT-based models consistently outperform their BERT-based counterparts in low-resource settings. Specifically, ChatMed-VHI achieved an F1 score close to 90% with fewer than 500 training examples, significantly surpassing PubMedBERT under identical training conditions. These findings highlight the data-efficient, high-performance potential of instruction-tuned LLMs for biomedical named entity recognition.
+This repository provides training pipelines for BERT and GPT based medical models.
 
-In summary, we present a practical and scalable approach for extracting VHIs from diverse textual sources within biomedical literature. Our findings underscore the promise of instruction-tuned LLMs in enhancing biomedical information extraction, particularly in settings where training data is limited or distributed across complex document structures.
+---
+
+# Project Structure
+
+```
+ChatMed-VHI
+│
+├── BERT_fine_tune        # BERT fine-tuning scripts
+├── GPT_fine_tune         # GPT fine-tuning scripts
+├── Metrics               # evaluation metrics
+├── data_process          # dataset preprocessing
+├── fine_tune_data        # training datasets
+```
+
+---
+
+# Installation
+
+### Requirements
+
+- Python >= 3.9
+- PyTorch >= 2.0
+- Transformers
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Quick Start
+
+## 1 Data Processing
+
+```
+python data_process/preprocess.py
+```
+
+---
+
+## 2 BERT Fine-tuning
+
+```
+python BERT_fine_tune/train.py
+```
+
+---
+
+## 3 GPT Fine-tuning
+
+```
+python GPT_fine_tune/train.py
+```
+
+---
+
+# Dataset Format
+
+Example training data format:
+
+```json
+{
+ "text": "Patient has severe tooth pain",
+ "entities": [
+   {"type": "Symptom", "value": "tooth pain"}
+ ]
+}
+```
+
+Fields:
+
+| Field | Description |
+|------|-------------|
+| text | medical dialogue text |
+| entities | labeled medical entities |
+
+---
+
+# Evaluation
+
+Evaluation scripts are provided in:
+
+```
+Metrics/
+```
+
+Example:
+
+```
+python Metrics/evaluate.py
+```
+
+Metrics include:
+
+- Precision
+- Recall
+- F1 Score
+
+---
+
+# Citation
+
+If you use this project in your research, please cite:
+
+```
+@misc{chatmedvhi2026,
+  title={ChatMed-VHI: Medical Dialogue Understanding Model},
+  author={Zhang Zheng},
+  year={2026},
+  url={https://github.com/benkyusimasu/ChatMed-VHI}
+}
+```
+
+---
+
+# License
+
+MIT License

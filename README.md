@@ -91,10 +91,15 @@ The dataset follows the HuggingFace Question Answering format.
 
 Example:
 {
+
 "id": "msxx4oe8zok46m3n0xzqphm0",
+
 "question": "What is the name of the virus whose protein interacts with host factors/proteins", 
+
 "context": "To further explore the effects of different MOIs of PR8 virus on hnRNPH1 expression, the western blot and qPCR were used to detect the protein and mRNA levels of hnRNPH1. The results showed that there were no significant difference in the protein and mRNA levels of hnRNPH1 after PR8 infection at different MOIs (MOI = 0.1, 1, 10) (Figure S1B and C). Besides, the overexpression and interference of hnRNPH1 had similar regulatory effects on viral replication in cells infected with different MOIs of PR8 (Figure S1D and E), suggesting that the interaction between hnRNPH1 and NS1 may be not affected by the amount of viral infection. ", 
+
 "answers": {"answer_start": [52], "text": ["PR8"]}
+
 }
 
 

@@ -14,67 +14,30 @@ The repository provides:
 
 ## System Workflow
 
-Virus Host Interaction related articles
-
-                 │
-								 
-                 ▼ 
-         Data Processing
-				 
-          (data_process)
-					
-                 │
-								 
-                 ▼
-								 
-      VHI Dataset Construction
-			
-         (fine_tune_data)
-				 
-                 │
-								 
-                 ▼
-								 
-      VHI entity extraction task
-			
-                 │
-								 
-     ┌───────────┴───────────┐
-     ▼                        ▼
-BERT Fine-tuning      GPT Fine-tuning 
-(BERT_fine_tune)      (GPT_fine_tune)
-    │                         │
-    └───────────┬───────────┘
-                 ▼
-         Model Evaluation
-             (Metrics)
-                 │
-                 ▼
-VHI information extraction(IE) Performance
 
 
 
 
 ## Project Structure
 
-ChatMed-VHI
+ChatMed-VHI/
 │
-├── BERT_fine_tune
+├── BERT_fine_tune/
 │   ├── Bert_finetune.ipynb
 │   ├── qa_BIOtoken.py
 │   └── utils_qa.py
 │
-├── GPT_fine_tune
+├── GPT_fine_tune/
 │   ├── GPT_fine_tune.ipynb
 │   └── GPT_zero_five_prompt.ipynb
 │
-├── Metrics
+├── Metrics/
 │   └── Metrics.ipynb
 │
-├── data_process
+├── data_process/
 │   └── data_process.ipynb
 │
-├── fine_tune_data
+├── fine_tune_data/
 │   ├── train.json
 │   ├── dev.json
 │   ├── test.json

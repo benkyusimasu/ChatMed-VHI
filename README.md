@@ -12,31 +12,30 @@ The repository provides:
 - Evaluation metrics for biomedical information extraction
 ---
 
-## System Workflow
-
-
-
-
-
 ## Project Structure
 
 ChatMed-VHI/
+
 │
+
 ├── BERT_fine_tune/
 │   ├── Bert_finetune.ipynb
 │   ├── qa_BIOtoken.py
 │   └── utils_qa.py
 │
+
 ├── GPT_fine_tune/
 │   ├── GPT_fine_tune.ipynb
 │   └── GPT_zero_five_prompt.ipynb
 │
+
 ├── Metrics/
 │   └── Metrics.ipynb
 │
 ├── data_process/
 │   └── data_process.ipynb
 │
+
 ├── fine_tune_data/
 │   ├── train.json
 │   ├── dev.json
@@ -46,6 +45,7 @@ ChatMed-VHI/
 │   ├── train50%_finetune.jsonl
 │   └── train100%_finetune.jsonl
 │
+
 ├── README.md
 └── LICENSE
 

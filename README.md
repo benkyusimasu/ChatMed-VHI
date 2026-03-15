@@ -61,7 +61,7 @@ cd ChatMed-VHI
 
 Create a virtual environment (recommended):
 
-conda create -n chatmed python=3.9
+conda create -n chatmed_vhi python=3.9
 conda activate chatmed
 
 Install dependencies:
